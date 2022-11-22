@@ -114,12 +114,6 @@ class GaussMethod
 
 $n = readline();
 $matrix = [[2.6,-4.5,-2,19.07],[3,3,4.3,3.21],[-6,3.5,3,-18.25]];
-//$matrix = array();
-//for ($i = 0; $i < $n; ++$i) {
-  //  for ($j = 0; $j < $n + 1; ++$j) {
-    //    $matrix[$i][$j] = readline();
-    //}
-//}
 $g = new GaussMethod($n, $matrix);
 $g->doGaussMethod();
 $g->printX();

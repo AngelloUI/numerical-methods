@@ -27,11 +27,11 @@ namespace gauss {
 
         private function maxCurrentColumn($columnIndex): int
         {
-            $max = $this->matrix[$columnIndex][$columnIndex];
+            $max = abs($this->matrix[$columnIndex][$columnIndex]);
             $maxRowIndex = $columnIndex;
             for ($i = $columnIndex; $i < $this->rowsAmount; ++$i) {
-                if ($max < $this->matrix[$i][$columnIndex]) {
-                    $max = $this->matrix[$i][$columnIndex];
+                if ($max < abs($this->matrix[$i][$columnIndex])) {
+                    $max = abs($this->matrix[$i][$columnIndex]);
                     $maxRowIndex = $i;
                 }
             }

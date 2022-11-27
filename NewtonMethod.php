@@ -15,7 +15,7 @@ final class NewtonMethod
     private const EPS = 1E-9;
     private float $x1;
     private float $x2;
-    private array $slae;
+    private array $SLAE;
 
     public function __construct($x1, $x2)
     {
@@ -59,13 +59,13 @@ final class NewtonMethod
         print 0 . " " . $this->x1 . " " . 0 . " " . $this->x2 . " " . 0 . "\n";
         $i = 0;
         do {
-            $this->slae[0][0] = $this->derF1X1($this->x1);
-            $this->slae[0][1] = $this->derF1X2($this->x2);
-            $this->slae[0][2] = $this->f1($this->x1, $this->x2);
-            $this->slae[1][0] = $this->derF2X1($this->x2);
-            $this->slae[1][1] = $this->derF2X2($this->x1, $this->x2);
-            $this->slae[1][2] = $this->f2($this->x1, $this->x2);
-            $g = new GaussMethod(2, $this->slae);
+            $this->SLAE[0][0] = $this->derF1X1($this->x1);
+            $this->SLAE[0][1] = $this->derF1X2($this->x2);
+            $this->SLAE[0][2] = $this->f1($this->x1, $this->x2);
+            $this->SLAE[1][0] = $this->derF2X1($this->x2);
+            $this->SLAE[1][1] = $this->derF2X2($this->x1, $this->x2);
+            $this->SLAE[1][2] = $this->f2($this->x1, $this->x2);
+            $g = new GaussMethod(2, $this->SLAE);
             $g->doGaussMethod();
             $delta = $g->getSolutionVector();
             $dx1 = $delta[0];

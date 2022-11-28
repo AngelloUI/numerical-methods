@@ -8,3 +8,4 @@ In file:<br>
 In file:<br>
 <img src="/img/y-leastjs.png"><br>
 <img src="/img/var-y-js.png"><br>
+It's allowing you to see the chart. 

@@ -31,7 +31,7 @@ class MethodOfLeastSquares
         $this->sumOfSquaredDeviations = $this->sigmaYSubFxOfSecondPower();
     }
 
-    private function f($x): float
+    public function f($x): float
     {
         return $this->coefficients[0] * $x + $this->coefficients[1];
     }
@@ -94,6 +94,12 @@ class MethodOfLeastSquares
 
 $x = [19.1, 25, 30.1, 36, 40, 45.1, 50];
 $y = [76.3, 77.8, 79.75, 80.8, 82.35, 83.9, 85];
+$chartFX = [];
 $mnk = new MethodOfLeastSquares($x, $y);
 $mnk->doLeastSquares();
+for ($i = 0; $i < count($x); ++$i){
+    $chartFX[$i] = $mnk->f($x[$i]);
+}
 print $mnk->getSumOfSquaredDeviations();
+file_put_contents('x-least-square.js',json_encode($x));
+file_put_contents('y-least-square.js',json_encode($chartFX));

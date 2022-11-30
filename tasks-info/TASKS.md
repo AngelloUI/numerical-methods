@@ -4,3 +4,8 @@
 <img src="/img/newton-task.png">
 <h3>Task 3. To code Method of Gauss</h3>
 <img src="/img/least-square-task.png">
+<h3>Task 4. To code the program that solves definite integral</h3>
+<img src="/img/task-trape-sim.png"><br>
+<img src="/img/sim-trape.png"><br>
+<img src="/img/sim-cubature-task.png"><br>
+<img src="/img/sim-cubature.png"><br>

@@ -2,7 +2,7 @@
 <img src="/img/gauss-task.png">
 <h3>Task 2. To code Method of Newton</h3>
 <img src="/img/newton-task.png">
-<h3>Task 3. To code Method of Gauss</h3>
+<h3>Task 3. To code Method of Least-square</h3>
 <img src="/img/least-square-task.png">
 <h3>Task 4. To code the program that solves definite integral</h3>
 <h3>trapezoid and Simpson methods</h3>

@@ -6,10 +6,6 @@ use gauss\GaussMethod;
 
 include 'GaussMethod.php';
 
-/*if ((include 'vars.php') == TRUE) {
-    echo 'OK';
-}*/
-
 final class NewtonMethod
 {
     private const EPS = 1E-9;

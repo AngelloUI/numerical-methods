@@ -66,20 +66,20 @@ class DefiniteIntegral
             $yi[$i] = $yi[$i - 1] + $hy;
         }
 
-	    for ($i = 0; $i < $n; ++$i) {
+	for ($i = 0; $i < $n; ++$i) {
             for ($j = 0; $j < $m; ++$j) {
-                $integralSum += $this->f2($xi[2 * $i], $yi[2 * $j]);
-			    $integralSum += 4 * $this->f2($xi[2 * $i + 1], $yi[2 * $j]);
-			    $integralSum += $this->f2($xi[2 * $i + 2], $yi[2 * $j]);
-			    $integralSum += 4 * $this->f2($xi[2 * $i], $yi[2 * $j + 1]);
-			    $integralSum += 16 * $this->f2($xi[2 * $i + 1], $yi[2 * $j + 1]);
-			    $integralSum += 4 * $this->f2($xi[2 * $i + 2], $yi[2 * $j + 1]);
-			    $integralSum += $this->f2($xi[2 * $i], $yi[2 * $j + 2]);
-			    $integralSum += 4 * $this->f2($xi[2 * $i + 1], $yi[2 * $j + 2]);
-			    $integralSum += $this->f2($xi[2 * $i + 2], $yi[2 * $j + 2]);
-		    }
+        	$integralSum += $this->f2($xi[2 * $i], $yi[2 * $j]);
+		$integralSum += 4 * $this->f2($xi[2 * $i + 1], $yi[2 * $j]);
+		$integralSum += $this->f2($xi[2 * $i + 2], $yi[2 * $j]);
+		$integralSum += 4 * $this->f2($xi[2 * $i], $yi[2 * $j + 1]);
+		$integralSum += 16 * $this->f2($xi[2 * $i + 1], $yi[2 * $j + 1]);
+		$integralSum += 4 * $this->f2($xi[2 * $i + 2], $yi[2 * $j + 1]);
+		$integralSum += $this->f2($xi[2 * $i], $yi[2 * $j + 2]);
+		$integralSum += 4 * $this->f2($xi[2 * $i + 1], $yi[2 * $j + 2]);
+		$integralSum += $this->f2($xi[2 * $i + 2], $yi[2 * $j + 2]);
 	    }
-	    $integralSum *= ($hx * $hy / 9);
+	}
+	$integralSum *= ($hx * $hy / 9);
         return $integralSum;
     }
 
